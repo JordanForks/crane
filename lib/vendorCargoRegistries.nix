@@ -124,7 +124,7 @@ let
           hashed = hash prefixedUrl;
         in
         ''
-          [source.${escapeShellArg name}]
+          [source."${escapeShellArg name}"]
           registry = "${url}"
           replace-with = "nix-sources-${hashed}"
         ''
